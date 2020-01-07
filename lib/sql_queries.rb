@@ -20,8 +20,6 @@ end
 
 def selects_most_prominent_color_and_returns_with_count
   return 'SELECT color, COUNT(color) FROM bears GROUP BY color ORDER BY COUNT(color) DESC LIMIT 1'
-
-  # return 'SELECT color, COUNT(color) FROM bears WHERE color == highest_count_color'
 end
 
 def counts_number_of_bears_with_goofy_temperaments
