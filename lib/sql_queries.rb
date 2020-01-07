@@ -21,15 +21,6 @@ end
 def selects_most_prominent_color_and_returns_with_count
   color_group_counts =  'SELECT color, COUNT(color) FROM bears GROUP BY color'
 
-  highest_count = 0
-  highest_count_color = "no color"
-  color_group_counts.each do |color|
-    if color[1] > highest_count
-      highest_count = color[1]
-      highest_count_color = color[0]
-    end
-  end
-
   return 'SELECT color, COUNT(color) FROM bears WHERE color == highest_count_color'
 end
 
