@@ -23,7 +23,7 @@ def selects_most_prominent_color_and_returns_with_count
 
   highest_count = 0
   highest_count_color = "no color"
-  color_group counts.each do |color|
+  color_group_counts.each do |color|
     if color[1] > highest_count
       highest_count = color[1]
       highest_count_color = color[0]
